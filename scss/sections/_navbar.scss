@@ -1,22 +1,52 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 .menu{
+
+    .navbar-toggler{
+        position: relative;
+        color: $black;
+    }
+   
     @include media-breakpoint-down(lg){
         img{
-            width:  40%;
-            height: 40%;
+            width:  65%;
+            height: 65%;
         }
     }
 
-    @include gradient;
+    @include media-breakpoint-down(sm){
+        .navbar-toggler{
+            position: relative;
+            top: -2.5rem;
+            left: 16.5rem;
+        }
+    }
+
+    @include media-breakpoint-up(sm){
+        .navbar-toggler{
+            position: relative;
+            top: -4rem;
+            left: 40rem;
+        }
+    }
+
+        background-color: $white;
+    // @include gradient;
 
     li{
-        padding: 0 0.7rem;
+        padding: 0 1rem;
 
         a{
-            color: $logo-color1 !important;
+            color: $black !important;
             text-transform: capitalize;
             font-weight: 600;
+
+            &:hover{
+                color: $pure-green !important;
+                font-weight: 700; 
+            }
         }
+
+        
     }
 }

@@ -42,6 +42,11 @@
             h4{
                 text-transform: uppercase;
                 display: block;
+
+                a{
+                    text-decoration: none;
+                    color: $white;
+                }
             }
         }
         
